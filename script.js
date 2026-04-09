@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeScrollButtons();
     initializeRevealAnimations();
     initializeParallaxMotion();
+    initializeHeroImageRotation();
     initializeHeroWordRotation();
     initializeRotatingBlade();
     initializeWhatsAppPreview();
@@ -329,6 +330,49 @@ function initializeParallaxMotion() {
 
     window.addEventListener("scroll", updateMotion, { passive: true });
     updateMotion();
+}
+
+// Rotate the existing hero images without changing their layout or dimensions.
+function initializeHeroImageRotation() {
+    const rotatingImages = document.querySelectorAll('[data-rotating-image="true"]');
+
+    if (!rotatingImages.length) {
+        return;
+    }
+
+    rotatingImages.forEach((image, imageIndex) => {
+        const slides = (image.dataset.rotationImages || "")
+            .split(",")
+            .map((entry) => entry.trim())
+            .filter(Boolean)
+            .map((entry) => {
+                const [src, alt] = entry.split("|");
+
+                return {
+                    src: src?.trim() || "",
+                    alt: alt?.trim() || "Hero image"
+                };
+            })
+            .filter((slide) => slide.src);
+
+        if (slides.length < 2) {
+            return;
+        }
+
+        let currentIndex = 0;
+        const interval = Number(image.dataset.rotationInterval || "6200") + (imageIndex * 220);
+
+        window.setInterval(() => {
+            image.classList.add("is-swapping");
+
+            window.setTimeout(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                image.src = slides[currentIndex].src;
+                image.alt = slides[currentIndex].alt;
+                image.classList.remove("is-swapping");
+            }, 420);
+        }, interval);
+    });
 }
 
 // Rotate highlighted hero words across all page hero sections.
