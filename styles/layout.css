@@ -1,0 +1,130 @@
+/* =========================
+   Global page structure
+   ========================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(18px);
+    background: rgba(245, 240, 232, 0.82);
+    border-bottom: 1px solid rgba(27, 23, 20, 0.06);
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: 1300;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.scroll-progress-bar {
+    height: 100%;
+    width: 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, var(--accent), #f0b48b, #25d366);
+    box-shadow: 0 0 18px rgba(196, 111, 68, 0.45);
+}
+
+.navbar {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+}
+
+.hero-section,
+.page-hero {
+    position: relative;
+    overflow: clip;
+}
+
+.hero-section {
+    padding: 0.85rem 0 3.5rem;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: calc(100svh - var(--header-height) - 4.2rem);
+}
+
+.section,
+.section-dark,
+.section-soft {
+    padding: 6rem 0;
+}
+
+.section-dark {
+    background:
+        radial-gradient(circle at top right, rgba(196, 111, 68, 0.24), transparent 30%),
+        #1b1816;
+    color: #f5ede4;
+}
+
+.section-soft {
+    background: rgba(255, 255, 255, 0.38);
+}
+
+.intro-split,
+.showcase-grid,
+.contact-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.feature-grid,
+.service-grid {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.preview-masonry {
+    columns: 2;
+    column-gap: 1rem;
+}
+
+.masonry-gallery {
+    columns: 3;
+    column-gap: 1rem;
+}
+
+.process-steps {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contact-layout {
+    align-items: stretch;
+}
+
+.site-footer {
+    padding: 2rem 0 7rem;
+}
+
+.inner-page {
+    min-height: calc(100vh - var(--header-height));
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact a Johannesburg Photographer | Lumen Frame Studio</title>
+    <meta name="description" content="Contact Lumen Frame Studio to check availability for wedding, portrait, event, or brand photography in Johannesburg and surrounding areas.">
+    <meta name="keywords" content="contact photographer Johannesburg, book photography session Johannesburg, wedding photographer contact">
+    <meta property="og:title" content="Contact a Johannesburg Photographer | Lumen Frame Studio">
+    <meta property="og:description" content="Share your date, location, and photography needs to receive tailored guidance and availability.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lumenframe.com/contact.html">
+    <meta property="og:image" content="https://picsum.photos/seed/lumen-og-contact/1200/630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact a Johannesburg Photographer | Lumen Frame Studio">
+    <meta name="twitter:description" content="Start your photography enquiry with clear next steps, thoughtful guidance, and a polished booking experience.">
+    <meta name="twitter:image" content="https://picsum.photos/seed/lumen-og-contact/1200/630">
+    <link rel="canonical" href="https://www.lumenframe.com/contact.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-page-path="/contact.html">
+    <!-- Shared site header -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Primary">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">LF</span>
+                <span class="brand-text">
+                    <strong data-site-field="businessName">Lumen Frame</strong>
+                    <small>Studio</small>
+                </span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="site-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- TODO: Replace with real WhatsApp number in script.js -->
+        <a class="mobile-booking-strip" href="#" data-site-link="whatsapp" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+    </header>
+
+    <!-- Main page content -->
+    <main class="inner-page">
+        <!-- Contact hero -->
+        <section class="page-hero page-hero-contact" aria-labelledby="contact-hero-title">
+            <div class="container reveal">
+                <p class="eyebrow">Contact</p>
+                <h1 id="contact-hero-title">Let's plan your <span class="hero-rotating-word" data-words="shoot,session,coverage,booking">shoot</span> with clarity from the first message.</h1>
+                <p>Share your date, location, and what you need photographed. You'll receive a thoughtful response shaped around your brief, not a one-size-fits-all reply.</p>
+            </div>
+        </section>
+
+        <!-- Contact form and studio info -->
+        <section class="section">
+            <div class="container contact-layout">
+                <div class="contact-card reveal">
+                    <p class="eyebrow">Send an enquiry</p>
+                    <h2>Tell us about your plans.</h2>
+                    <p>Include your preferred date, location, and the kind of photography coverage you need so the reply can be tailored properly.</p>
+                    <!-- TODO: Replace the action value below with your real Formspree endpoint when ready. -->
+                    <form class="contact-form" id="contact-form" action="#" method="post" novalidate data-formspree-endpoint="">
+                        <label for="contact-name">
+                            <span>Name <small class="required-badge">Required</small></span>
+                        </label>
+                        <input id="contact-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required aria-describedby="contact-name-error">
+                        <small class="field-error" id="contact-name-error"></small>
+
+                        <label for="contact-email">
+                            <span>Email <small class="required-badge">Required</small></span>
+                        </label>
+                        <input id="contact-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="contact-email-error">
+                        <small class="field-error" id="contact-email-error"></small>
+
+                        <label for="contact-phone">
+                            <span>Phone or WhatsApp</span>
+                        </label>
+                        <input id="contact-phone" type="tel" name="phone" placeholder="+27 ..." autocomplete="tel" aria-describedby="contact-phone-error">
+                        <small class="field-error" id="contact-phone-error"></small>
+
+                        <label for="contact-service">
+                            <span>Service <small class="required-badge">Required</small></span>
+                        </label>
+                        <select id="contact-service" name="service" required aria-describedby="contact-service-error">
+                            <option value="">Select a service</option>
+                            <option value="Wedding Coverage">Wedding Coverage</option>
+                            <option value="Portrait Session">Portrait Session</option>
+                            <option value="Event Photography">Event Photography</option>
+                            <option value="Brand or Product Shoot">Brand or Product Shoot</option>
+                        </select>
+                        <small class="field-error" id="contact-service-error"></small>
+
+                        <label for="contact-date">
+                            <span>Preferred date</span>
+                        </label>
+                        <input id="contact-date" type="text" name="date" placeholder="For example: 18 October 2026" aria-describedby="contact-date-error">
+                        <small class="field-error" id="contact-date-error"></small>
+
+                        <label for="contact-message">
+                            <span>Tell us about the booking <small class="required-badge">Required</small></span>
+                        </label>
+                        <textarea id="contact-message" name="message" rows="6" placeholder="Share the date, location, number of people, and the style of coverage you have in mind." required aria-describedby="contact-message-error"></textarea>
+                        <small class="field-error" id="contact-message-error"></small>
+
+                        <button class="button button-primary button-full" type="submit" id="contact-submit">Send Enquiry</button>
+                        <p class="form-status" id="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <aside class="contact-info-card reveal reveal-delay" aria-labelledby="contact-info-title">
+                    <p class="eyebrow">Studio details</p>
+                    <h2 id="contact-info-title">Reach out directly if you prefer.</h2>
+                    <div class="contact-info-list">
+                        <article>
+                            <strong>Email</strong>
+                            <span data-site-field="email">hello@lumenframe.com</span>
+                        </article>
+                        <article>
+                            <strong>Phone</strong>
+                            <span data-site-field="phoneDisplay">+27 71 234 5678</span>
+                        </article>
+                        <article>
+                            <strong>Service area</strong>
+                            <span data-site-field="serviceArea">Johannesburg, South Africa</span>
+                        </article>
+                        <article>
+                            <strong>Response time</strong>
+                            <span>Most enquiries receive a reply within one business day.</span>
+                        </article>
+                    </div>
+                    <div class="whatsapp-inline-contact">
+                        <div class="whatsapp-inline-preview" id="contact-whatsapp-preview" hidden>
+                            <div class="whatsapp-inline-window" role="dialog" aria-label="WhatsApp message preview">
+                                <button class="whatsapp-inline-close" type="button" aria-label="Close WhatsApp preview" data-close-inline-whatsapp="true">&times;</button>
+                                <div class="whatsapp-inline-bar">
+                                    <div class="whatsapp-inline-avatar" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor">
+                                            <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <strong>WhatsApp preview</strong>
+                                        <span>Message ready to send</span>
+                                    </div>
+                                </div>
+                                <div class="whatsapp-inline-chat">
+                                    <div class="whatsapp-inline-bubble">
+                                        <p data-site-field="whatsappPreview">Hi Lumen Frame Studio, I would like to enquire about availability for a photography booking.</p>
+                                    </div>
+                                </div>
+                                <a class="button button-primary button-full" href="#" data-site-link="whatsapp" target="_blank" rel="noopener noreferrer">Continue to WhatsApp</a>
+                            </div>
+                        </div>
+                        <button class="button button-secondary button-full whatsapp-inline-trigger" type="button" id="contact-whatsapp-trigger" aria-expanded="false" aria-controls="contact-whatsapp-preview">
+                            <span class="whatsapp-inline-trigger-icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="currentColor">
+                                    <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"/>
+                                </svg>
+                            </span>
+                            <span>Message on WhatsApp</span>
+                        </button>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-soft faq-section" aria-labelledby="contact-faq-title">
+            <div class="container gallery-intro reveal">
+                <p class="eyebrow">Booking questions</p>
+                <h2 id="contact-faq-title">A few practical answers before you send your enquiry.</h2>
+            </div>
+            <div class="container faq-list">
+                <article class="faq-item reveal">
+                    <h3>What should I include in my message?</h3>
+                    <p>The date, venue or location, type of shoot, expected timing, and anything important about the look or feel you want. That helps shape a useful first reply.</p>
+                </article>
+                <article class="faq-item reveal reveal-delay">
+                    <h3>What happens after I enquire?</h3>
+                    <p>You'll receive a reply with availability, guidance on the best-fit package or coverage approach, and the next booking steps if the date is open.</p>
+                </article>
+                <article class="faq-item reveal reveal-delay-2">
+                    <h3>Can I enquire even if I am still deciding?</h3>
+                    <p>Yes. Early enquiries are welcome, especially for weddings and dates that may need advance planning.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-panel reveal">
+                    <div>
+                        <p class="eyebrow">Ready when you are</p>
+                        <h2>Prefer to start the conversation on WhatsApp?</h2>
+                        <p>Use the WhatsApp button for a quick first message, or send the full enquiry form if you want a more detailed response.</p>
+                    </div>
+                    <a class="button button-primary" href="#" data-site-link="whatsapp" target="_blank" rel="noopener noreferrer">Start on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared footer -->
+    <footer class="site-footer" aria-label="Footer">
+        <div class="container footer-grid">
+            <div>
+                <h3 data-site-field="businessNameFull">Lumen Frame Studio</h3>
+                <p>Premium photography for weddings, portraits, events, and brand commissions with thoughtful planning and polished delivery.</p>
+            </div>
+            <div class="footer-contact">
+                <!-- TODO: Replace with real business contact details in script.js -->
+                <p><a href="#" data-site-link="email"><span data-site-field="email">hello@lumenframe.com</span></a></p>
+                <p><a href="#" data-site-link="phone"><span data-site-field="phoneDisplay">+27 71 234 5678</span></a></p>
+                <p data-site-field="serviceArea">Johannesburg, South Africa</p>
+            </div>
+            <div class="footer-socials" aria-label="Social links">
+                <a href="#" data-site-link="instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="#" data-site-link="facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared WhatsApp preview modal -->
+    <div class="whatsapp-preview" id="whatsapp-preview" hidden>
+        <div class="whatsapp-preview-backdrop" data-close-whatsapp="true"></div>
+        <div class="whatsapp-preview-card" role="dialog" aria-modal="true" aria-labelledby="whatsapp-title">
+            <div class="whatsapp-preview-head">
+                <div class="whatsapp-preview-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .17 5.33.17 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.32-1.65a11.9 11.9 0 0 0 5.75 1.46h.01c6.57 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.46-8.43Z" fill="currentColor"/>
+                        <path d="M17.02 13.98c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.3-.79-.71-1.33-1.58-1.49-1.85-.16-.27-.02-.42.12-.56.13-.13.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.27.23-.61.23-1.13.16-1.27-.07-.13-.25-.2-.52-.34Z" fill="#161413"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 id="whatsapp-title">Open WhatsApp chat?</h3>
+                    <p>You can review and edit the message in WhatsApp before sending.</p>
+                </div>
+            </div>
+            <div class="whatsapp-message-preview">
+                <span class="message-label">Preview</span>
+                <p data-site-field="whatsappPreview">Hi Lumen Frame Studio, I would like to enquire about availability for a photography booking.</p>
+            </div>
+            <div class="whatsapp-preview-actions">
+                <button class="button button-secondary" type="button" data-close-whatsapp="true">Cancel</button>
+                <a class="button button-primary" href="#" data-site-link="whatsapp" target="_blank" rel="noopener noreferrer">Continue to WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating actions -->
+    <a class="floating-whatsapp" href="#" data-site-link="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .17 5.33.17 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.32-1.65a11.9 11.9 0 0 0 5.75 1.46h.01c6.57 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.46-8.43Z" fill="currentColor"/>
+            <path d="M17.02 13.98c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.13-.18.27-.7.88-.85 1.06-.16.18-.31.2-.58.07-.27-.14-1.12-.41-2.14-1.3-.79-.71-1.33-1.58-1.49-1.85-.16-.27-.02-.42.12-.56.13-.13.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.63 1.11 2.81c.14.18 1.91 2.92 4.63 4.09.65.28 1.16.45 1.56.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.27.23-.61.23-1.13.16-1.27-.07-.13-.25-.2-.52-.34Z" fill="#ffffff"/>
+        </svg>
+    </a>
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">&#8593;</button>
+    <!-- Shared site interactions -->
+    <script src="script.js"></script>
+</body>
+</html>

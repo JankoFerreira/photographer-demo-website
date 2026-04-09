@@ -1,0 +1,5 @@
+# TODO: Replace the sitemap domain below with the real production domain.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.lumenframe.com/sitemap.xml

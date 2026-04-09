@@ -1,0 +1,551 @@
+/* =========================
+   Reusable components
+   ========================= */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.brand-mark {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #edb183);
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    box-shadow: 0 16px 28px rgba(196, 111, 68, 0.25);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.brand-text small {
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-links a {
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    color: var(--muted);
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.nav-links a:focus-visible,
+.mobile-booking-strip:focus-visible,
+.menu-toggle:focus-visible,
+.button:focus-visible,
+.floating-whatsapp:focus-visible,
+.back-to-top:focus-visible,
+.gallery-filter-button:focus-visible,
+.gallery-shot-button:focus-visible,
+.lightbox-close:focus-visible,
+.footer-socials a:focus-visible,
+.footer-contact a:focus-visible {
+    outline: 3px solid rgba(196, 111, 68, 0.28);
+    outline-offset: 3px;
+}
+
+.mobile-booking-strip {
+    display: none;
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, var(--accent), #db8d61);
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+.menu-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    border-color: var(--accent);
+}
+
+.menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--text);
+    margin: 5px auto;
+}
+
+.eyebrow {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.hero-copy h1,
+.page-hero h1,
+.section-heading h2,
+.showcase-copy h2,
+.cta-panel h2,
+.gallery-intro h2,
+.service-panel h2,
+.contact-card h2,
+.contact-info-card h2,
+.process-strip h2,
+.site-footer h3 {
+    font-family: "Cormorant Garamond", serif;
+    line-height: 0.96;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    overflow: hidden;
+    isolation: isolate;
+    font-weight: 700;
+    transition:
+        transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0));
+    opacity: 0.85;
+    z-index: -2;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -30%;
+    width: 46%;
+    height: 320%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0));
+    transform: rotate(18deg) translateX(-180%);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+}
+
+.button:hover {
+    transform: translateY(-3px) scale(1.01);
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+    transform: rotate(18deg) translateX(420%);
+}
+
+.button:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, var(--accent), #db8d61);
+    color: white;
+    box-shadow: 0 18px 34px rgba(196, 111, 68, 0.28);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    box-shadow: 0 22px 40px rgba(196, 111, 68, 0.34);
+}
+
+.button-secondary {
+    border: 1px solid rgba(27, 23, 20, 0.1);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.58);
+    box-shadow: 0 12px 28px rgba(28, 20, 14, 0.08);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+    border-color: rgba(196, 111, 68, 0.26);
+    box-shadow: 0 18px 34px rgba(28, 20, 14, 0.12);
+}
+
+.button-light {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff7f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 18px 34px rgba(7, 6, 6, 0.18);
+}
+
+.button-light:hover,
+.button-light:focus-visible {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.button-full {
+    width: 100%;
+}
+
+.feature-card,
+.service-panel,
+.contact-card,
+.contact-info-card,
+.cta-panel,
+.process-strip {
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.feature-card,
+.service-panel,
+.contact-card,
+.contact-info-card {
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+.feature-number,
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
+
+.testimonial-card,
+.package-card {
+    border-radius: var(--radius-lg);
+    padding: 1.7rem;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.cta-panel {
+    padding: 2rem 2.2rem;
+    border-radius: var(--radius-lg);
+}
+
+/* WhatsApp Floating Button */
+.floating-whatsapp,
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    z-index: 1000;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.15);
+}
+
+.floating-whatsapp {
+    bottom: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    min-height: 60px;
+    padding: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, opacity 0.45s ease;
+    animation: whatsappFloatIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 20px 36px rgba(18, 95, 73, 0.28);
+}
+
+.back-to-top {
+    bottom: 5.4rem;
+    border-radius: 999px;
+    min-width: 54px;
+    min-height: 54px;
+    border: 0;
+    background: var(--surface-dark);
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: 0.25s ease;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.whatsapp-preview[hidden] {
+    display: none;
+}
+
+.whatsapp-preview {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+}
+
+.whatsapp-preview-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(9, 8, 8, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.whatsapp-preview-card {
+    position: relative;
+    z-index: 1;
+    width: min(92vw, 460px);
+    margin: min(10vh, 5rem) auto 0;
+    padding: 1.5rem;
+    border-radius: 28px;
+    background: #fffdf9;
+    box-shadow: var(--shadow);
+}
+
+.whatsapp-preview-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-preview-head h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.15rem;
+}
+
+.whatsapp-preview-head p,
+.whatsapp-message-preview p {
+    color: var(--muted);
+}
+
+.whatsapp-preview-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    flex: none;
+}
+
+.whatsapp-preview-icon svg,
+.floating-whatsapp svg {
+    width: 24px;
+    height: 24px;
+}
+
+.whatsapp-inline-contact {
+    position: relative;
+}
+
+.whatsapp-inline-trigger {
+    gap: 0.7rem;
+}
+
+.whatsapp-inline-trigger-icon {
+    display: inline-flex;
+    color: #25d366;
+}
+
+.whatsapp-inline-trigger::before {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.12), rgba(255, 255, 255, 0));
+}
+
+.whatsapp-inline-trigger.is-pulsing {
+    animation: whatsappButtonPulse 2.2s ease-in-out infinite;
+}
+
+.whatsapp-inline-preview[hidden] {
+    display: none;
+}
+
+.whatsapp-inline-preview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 0.9rem);
+    z-index: 12;
+}
+
+.whatsapp-inline-window {
+    position: relative;
+    padding: 0.9rem;
+    border-radius: 24px;
+    background: #efeae2;
+    border: 1px solid rgba(27, 23, 20, 0.08);
+    box-shadow: 0 22px 40px rgba(38, 23, 14, 0.18);
+}
+
+.whatsapp-inline-window::after {
+    content: "";
+    position: absolute;
+    left: 1.4rem;
+    bottom: -10px;
+    width: 18px;
+    height: 18px;
+    background: #efeae2;
+    transform: rotate(45deg);
+    border-right: 1px solid rgba(27, 23, 20, 0.08);
+    border-bottom: 1px solid rgba(27, 23, 20, 0.08);
+}
+
+.whatsapp-inline-close {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.86);
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 10px 18px rgba(25, 20, 15, 0.1);
+}
+
+.whatsapp-inline-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.55rem 0.7rem 0.95rem;
+}
+
+.whatsapp-inline-avatar {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    flex: none;
+}
+
+.whatsapp-inline-bar strong,
+.whatsapp-inline-bar span {
+    display: block;
+}
+
+.whatsapp-inline-bar span {
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.whatsapp-inline-chat {
+    padding: 0.2rem 0.35rem 1rem;
+}
+
+.whatsapp-inline-bubble {
+    max-width: 88%;
+    margin-left: auto;
+    padding: 0.9rem 1rem;
+    border-radius: 18px 18px 6px 18px;
+    background: #dcf8c6;
+    color: #1f2b21;
+    box-shadow: 0 10px 18px rgba(39, 58, 42, 0.08);
+}
+
+.whatsapp-inline-bubble p {
+    color: inherit;
+}
+
+.whatsapp-message-preview {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    background: rgba(37, 211, 102, 0.08);
+}
+
+.message-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #128c7e;
+}
+
+.whatsapp-preview-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.footer-contact,
+.footer-socials {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.footer-contact a,
+.footer-socials a {
+    color: inherit;
+}

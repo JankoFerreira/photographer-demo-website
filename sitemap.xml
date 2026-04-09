@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Replace lumenframe.com with the real production domain before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.lumenframe.com/</loc>
+  </url>
+  <url>
+    <loc>https://www.lumenframe.com/gallery.html</loc>
+  </url>
+  <url>
+    <loc>https://www.lumenframe.com/services.html</loc>
+  </url>
+  <url>
+    <loc>https://www.lumenframe.com/contact.html</loc>
+  </url>
+</urlset>
