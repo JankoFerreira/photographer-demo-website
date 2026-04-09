@@ -14,6 +14,15 @@
         min-height: 420px;
     }
 
+    .hero-card-main {
+        inset: 2% 10% 12% 14%;
+    }
+
+    .hero-card-tertiary {
+        width: 28%;
+        top: 8%;
+    }
+
     .feature-grid,
     .process-steps,
     .live-grid,
@@ -77,6 +86,29 @@
         max-width: 100%;
     }
 
+    .hero-photo-layer {
+        padding: 0.46rem 0.46rem 0.82rem;
+        border-radius: 10px;
+    }
+
+    .hero-card-main {
+        inset: 5% 11% 12% 10%;
+    }
+
+    .hero-card-accent {
+        width: 36%;
+        right: 4%;
+        bottom: 6%;
+        height: 30%;
+    }
+
+    .hero-card-tertiary {
+        width: 31%;
+        left: -4%;
+        top: 8%;
+        height: 28%;
+    }
+
     .stats-grid,
     .feature-grid,
     .process-steps,
@@ -135,12 +167,21 @@
     }
 
     .hero-card-main {
-        inset: 0 0 16% 0;
+        inset: 6% 8% 14% 11%;
     }
 
     .hero-card-accent {
-        width: 48%;
-        height: 32%;
+        width: 38%;
+        right: 2%;
+        bottom: 5%;
+        height: 28%;
+    }
+
+    .hero-card-tertiary {
+        width: 29%;
+        left: -2%;
+        top: 7%;
+        height: 24%;
     }
 
     .feature-card,

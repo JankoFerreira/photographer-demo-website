@@ -332,7 +332,7 @@ function initializeParallaxMotion() {
     updateMotion();
 }
 
-// Rotate the existing hero images without changing their layout or dimensions.
+// Rotate the main hero images with a soft fade while keeping the layered layout intact.
 function initializeHeroImageRotation() {
     const rotatingImages = document.querySelectorAll('[data-rotating-image="true"]');
 
@@ -370,7 +370,7 @@ function initializeHeroImageRotation() {
                 image.src = slides[currentIndex].src;
                 image.alt = slides[currentIndex].alt;
                 image.classList.remove("is-swapping");
-            }, 420);
+            }, 620);
         }, interval);
     });
 }
