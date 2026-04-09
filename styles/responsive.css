@@ -28,8 +28,14 @@
     .live-grid,
     .testimonials-grid,
     .package-grid,
-    .faq-list {
+    .faq-list,
+    .pricing-detail-grid,
+    .pricing-addon-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-example-grid {
+        grid-template-columns: 1fr;
     }
 
     .masonry-gallery {
@@ -115,7 +121,9 @@
     .live-grid,
     .testimonials-grid,
     .package-grid,
-    .faq-list {
+    .faq-list,
+    .pricing-detail-grid,
+    .pricing-addon-grid {
         grid-template-columns: 1fr;
     }
 
