@@ -3,9 +3,9 @@
 // TODO: Replace these placeholders with the real business details.
 // =========================================
 const SITE_CONFIG = {
-    businessName: "Lumen Frame",
-    businessNameFull: "Lumen Frame Studio",
-    email: "hello@lumenframe.com",
+    businessName: "Velori Capture",
+    businessNameFull: "Velori Capture Studio",
+    email: "hello@veloricapture.com",
     phoneDisplay: "+27 71 234 5678",
     phoneHref: "+27712345678",
     // TODO: Replace with the real WhatsApp number in the format 277XXXXXXXXX
@@ -18,8 +18,8 @@ const SITE_CONFIG = {
         instagram: "https://www.instagram.com/",
         facebook: "https://www.facebook.com/"
     },
-    canonicalBase: "https://www.lumenframe.com",
-    whatsappPreview: "Hi Lumen Frame Studio, I would like to enquire about availability for a photography booking."
+    canonicalBase: "https://www.veloricapture.com",
+    whatsappPreview: "Hi Velori Capture Studio, I would like to enquire about availability for a photography booking."
 };
 
 // Initialize all shared site behaviors once the DOM is ready.
@@ -309,15 +309,28 @@ function initializeRevealAnimations() {
 
 // Add subtle scroll-based movement to selected homepage elements.
 function initializeParallaxMotion() {
+    const backdrop = document.querySelector(".hero-backdrop");
+    const pageHeroes = document.querySelectorAll(".page-hero");
     const visual = document.querySelector(".hero-visual");
     const livePanel = document.querySelector(".live-panel");
 
-    if (!visual && !livePanel) {
+    if (!backdrop && !pageHeroes.length && !visual && !livePanel) {
         return;
     }
 
     const updateMotion = () => {
         const scrollY = window.scrollY;
+
+        if (backdrop) {
+            backdrop.style.setProperty("--hero-parallax-offset", `${Math.min(scrollY * 0.12, 56)}px`);
+        }
+
+        pageHeroes.forEach((hero) => {
+            const heroTop = hero.offsetTop;
+            const distance = window.scrollY - heroTop;
+            const offset = Math.max(Math.min(distance * 0.08, 42), -18);
+            hero.style.setProperty("--hero-parallax-offset", `${offset}px`);
+        });
 
         if (visual) {
             visual.style.transform = `translateY(${Math.min(scrollY * 0.04, 18)}px)`;

@@ -71,6 +71,15 @@
     }
 }
 
+@keyframes heroBackdropZoom {
+    0% {
+        transform: translateY(var(--hero-parallax-offset, 0px)) scale(var(--hero-base-scale, 1.08));
+    }
+    100% {
+        transform: translateY(var(--hero-parallax-offset, 0px)) scale(calc(var(--hero-base-scale, 1.08) + 0.07));
+    }
+}
+
 @keyframes liveGlow {
     0%,
     100% {

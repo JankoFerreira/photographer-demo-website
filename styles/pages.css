@@ -4,9 +4,17 @@
 .hero-backdrop {
     position: absolute;
     inset: 0;
+    --hero-parallax-offset: 0px;
+    --hero-base-scale: 1.14;
     background:
+        linear-gradient(130deg, rgba(22, 20, 19, 0.72), rgba(22, 20, 19, 0.46)),
+        url("https://picsum.photos/seed/lumen-hero-background/1800/1200") center/cover,
         linear-gradient(130deg, rgba(22, 20, 19, 0.92), rgba(22, 20, 19, 0.55)),
         linear-gradient(120deg, rgba(196, 111, 68, 0.26), transparent 50%);
+    transform: translateY(var(--hero-parallax-offset)) scale(var(--hero-base-scale));
+    transform-origin: center center;
+    will-change: transform;
+    animation: heroBackdropZoom 9s ease-in-out infinite alternate;
 }
 
 .hero-copy {
@@ -186,12 +194,13 @@
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+    opacity: 1;
     filter: saturate(1.04) contrast(1.02);
     transition: opacity 0.95s ease-in-out, filter 0.95s ease-in-out;
 }
 
 .hero-card img.is-swapping {
-    opacity: 0.04;
+    opacity: 0.1;
     filter: saturate(0.94) contrast(0.97);
 }
 
@@ -236,6 +245,7 @@
     background: currentColor;
     animation: wheelMove 1.7s ease-in-out infinite;
 }
+
 
 .section-heading h2,
 .showcase-copy h2,
@@ -378,11 +388,13 @@
 .page-hero {
     padding: 7rem 0 4rem;
     color: #f8f3ee;
+    --hero-parallax-offset: 0px;
+    --hero-base-scale: 1.12;
 }
 
 .page-hero .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .page-hero::before {
@@ -390,22 +402,37 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(22, 20, 19, 0.88), rgba(22, 20, 19, 0.45));
+    z-index: 1;
 }
 
-.page-hero-gallery {
-    background: linear-gradient(135deg, rgba(22, 20, 19, 0.6), rgba(22, 20, 19, 0.2)), url("https://picsum.photos/seed/banner-gallery/1600/900") center/cover;
+.page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(var(--hero-parallax-offset)) scale(var(--hero-base-scale));
+    transform-origin: center center;
+    will-change: transform;
+    animation: heroBackdropZoom 10s ease-in-out infinite alternate;
+    z-index: 0;
 }
 
-.page-hero-services {
-    background: linear-gradient(135deg, rgba(22, 20, 19, 0.6), rgba(22, 20, 19, 0.2)), url("https://picsum.photos/seed/banner-services/1600/900") center/cover;
+.page-hero-gallery::after {
+    background-image: url("https://picsum.photos/seed/banner-gallery/1600/900");
 }
 
-.page-hero-contact {
-    background: linear-gradient(135deg, rgba(22, 20, 19, 0.6), rgba(22, 20, 19, 0.2)), url("https://picsum.photos/seed/banner-contact/1600/900") center/cover;
+.page-hero-services::after {
+    background-image: url("https://picsum.photos/seed/banner-services/1600/900");
 }
 
-.page-hero-pricing {
-    background: linear-gradient(135deg, rgba(22, 20, 19, 0.6), rgba(22, 20, 19, 0.24)), url("https://picsum.photos/seed/banner-pricing/1600/900") center/cover;
+.page-hero-contact::after {
+    background-image: url("https://picsum.photos/seed/banner-contact/1600/900");
+}
+
+.page-hero-pricing::after {
+    background-image: url("https://picsum.photos/seed/banner-pricing/1600/900");
 }
 
 .page-hero h1 {

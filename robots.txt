@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lumenframe.com/sitemap.xml
+Sitemap: https://www.veloricapture.com/sitemap.xml
